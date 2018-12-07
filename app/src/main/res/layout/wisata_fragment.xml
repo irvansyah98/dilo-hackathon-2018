@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    tools:context=".CariActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/txt_cari"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:hint="Mau kemana ?"
+            android:paddingLeft="7dp"
+            android:paddingRight="10dp"
+            android:background="@drawable/bg_input2"
+            android:drawableRight="@drawable/ic_search"/>
+
+        <EditText
+            android:id="@+id/txt_checkin"
+            android:layout_width="140dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/txt_cari"
+            android:hint="Check in"
+            android:layout_marginTop="20dp"
+            android:focusableInTouchMode="false"
+            android:paddingLeft="7dp"
+            android:paddingRight="10dp"
+            android:background="@drawable/bg_input2"/>
+
+        <EditText
+            android:id="@+id/txt_checkout"
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/txt_cari"
+            android:layout_toRightOf="@+id/txt_checkin"
+            android:hint="Check out"
+            android:focusableInTouchMode="false"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:inputType="date"
+            android:paddingLeft="7dp"
+            android:paddingRight="10dp"
+            android:background="@drawable/bg_input2"/>
+
+        <EditText
+            android:id="@+id/txt_budget"
+            android:layout_width="140dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/txt_checkin"
+            android:hint="Budget anda"
+            android:layout_marginTop="20dp"
+            android:inputType="number"
+            android:paddingLeft="7dp"
+            android:paddingRight="10dp"
+            android:background="@drawable/bg_input2"/>
+
+        <EditText
+            android:id="@+id/txt_jml_wisata"
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/txt_checkout"
+            android:layout_toRightOf="@+id/txt_checkin"
+            android:hint="Jml Wisatawan"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:inputType="date"
+            android:paddingLeft="7dp"
+            android:paddingRight="10dp"
+            android:background="@drawable/bg_input2"/>
+
+        <Button
+            android:id="@+id/btn_logout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center"
+            android:text="Cari"
+            android:layout_below="@+id/txt_jml_wisata"
+            android:layout_marginTop="20dp"
+            android:background="#79B712"
+            android:textColor="#fff"/>
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

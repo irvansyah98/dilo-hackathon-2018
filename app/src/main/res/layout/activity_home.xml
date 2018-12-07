@@ -1,0 +1,906 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".HomeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:measureWithLargestChild="false"
+        android:layout_marginBottom="60dp"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbarHome"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <EditText
+                android:id="@+id/txt_cari"
+                android:layout_width="230dp"
+                android:layout_height="35dp"
+                android:hint="Mau cari apa ?"
+                android:focusable="false"
+                android:paddingLeft="7dp"
+                android:background="@drawable/bg_input"
+                android:drawableRight="@drawable/ic_search"/>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_chat"
+                android:layout_marginRight="5dp"/>
+
+            <ImageView
+                android:id="@+id/btn_cart"
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_cart"
+                android:layout_marginRight="5dp"/>
+
+        </android.support.v7.widget.Toolbar>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.design.widget.AppBarLayout
+                    android:id="@+id/appbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fitsSystemWindows="true"
+                    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+                    <android.support.design.widget.CollapsingToolbarLayout
+                        android:id="@+id/collapsing_toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fitsSystemWindows="true"
+                        android:background="#fff"
+                        app:contentScrim="?attr/colorPrimary"
+                        app:expandedTitleMarginEnd="64dp"
+                        app:expandedTitleMarginStart="48dp"
+                        app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <com.synnapps.carouselview.CarouselView
+                                    android:id="@+id/carouselView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="160dp"
+                                    android:layout_marginBottom="10dp"
+                                    app:fillColor="#FFFFFFFF"
+                                    app:pageColor="#00000000"
+                                    app:radius="6dp"
+                                    app:slideInterval="3000"
+                                    app:strokeColor="#FF777777"
+                                    app:strokeWidth="1dp"/>
+
+                            </RelativeLayout>
+
+                    </android.support.design.widget.CollapsingToolbarLayout>
+                </android.support.design.widget.AppBarLayout>
+
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:textColor="#3e3e3e"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Promo Hari Ini"/>
+
+                <HorizontalScrollView
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:scrollbars="none"
+                    android:background="#fff">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/card_view_home1"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp"
+                            android:elevation="3dp"
+                            card_view:cardCornerRadius="5dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/thumbnail_home1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="160dp"
+                                    android:background="?attr/selectableItemBackgroundBorderless"
+                                    android:clickable="true"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/jatimpark"/>
+
+                                <TextView
+                                    android:id="@+id/judul_produk1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/thumbnail_home1"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:paddingTop="10dp"
+                                    android:textColor="#000"
+                                    android:text="Batu Malang, Coban Rais."
+                                    android:textSize="12dp" />
+
+                                <ImageView
+                                    android:id="@+id/ic_locations1"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_below="@id/judul_produk1"
+                                    android:padding="5dp"
+                                    android:src="@drawable/ic_location" />
+
+                                <TextView
+                                    android:id="@+id/lokasi1"
+                                    android:layout_width="300dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/judul_produk1"
+                                    android:layout_toRightOf="@+id/ic_locations1"
+                                    android:paddingLeft="10dp"
+                                    android:padding="5dp"
+                                    android:text="Malang"
+                                    android:textColor="#454545"
+                                    android:textSize="12dp" />
+
+                                <TextView
+                                    android:id="@+id/harga1"
+                                    android:layout_width="95dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/lokasi1"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:paddingTop="5dp"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textStyle="bold"
+                                    android:text="Rp. 100.0000"
+                                    android:textSize="12dp"
+                                    android:layout_marginBottom="10dp"/>
+
+                                <Button
+                                    android:layout_width="75dp"
+                                    android:layout_height="25dp"
+                                    android:background="@color/colorPrimary"
+                                    android:layout_toRightOf="@id/harga1"
+                                    android:layout_below="@id/lokasi1"
+                                    android:text="Beli"
+                                    android:textColor="#fff"
+                                    android:textAllCaps="false"/>
+
+                            </RelativeLayout>
+
+                        </android.support.v7.widget.CardView>
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/card_view_home2"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp"
+                            android:elevation="3dp"
+                            card_view:cardCornerRadius="5dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/thumbnail_home2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="160dp"
+                                    android:background="?attr/selectableItemBackgroundBorderless"
+                                    android:clickable="true"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/jatimpark"/>
+
+                                <TextView
+                                    android:id="@+id/judul_produk2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/thumbnail_home2"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:paddingTop="10dp"
+                                    android:textColor="#000"
+                                    android:text="Batu Malang, Coban Rais."
+                                    android:textSize="12dp" />
+
+                                <ImageView
+                                    android:id="@+id/ic_locations2"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_below="@id/judul_produk2"
+                                    android:padding="5dp"
+                                    android:src="@drawable/ic_location" />
+
+                                <TextView
+                                    android:id="@+id/lokasi2"
+                                    android:layout_width="300dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/judul_produk2"
+                                    android:layout_toRightOf="@+id/ic_locations2"
+                                    android:paddingLeft="10dp"
+                                    android:padding="5dp"
+                                    android:text="Malang"
+                                    android:textColor="#454545"
+                                    android:textSize="12dp" />
+
+                                <TextView
+                                    android:id="@+id/harga2"
+                                    android:layout_width="95dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/lokasi2"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:paddingTop="5dp"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textStyle="bold"
+                                    android:text="Rp. 100.0000"
+                                    android:textSize="12dp"
+                                    android:layout_marginBottom="10dp"/>
+
+                                <Button
+                                    android:layout_width="75dp"
+                                    android:layout_height="25dp"
+                                    android:background="@color/colorPrimary"
+                                    android:layout_toRightOf="@id/harga2"
+                                    android:layout_below="@id/lokasi2"
+                                    android:text="Beli"
+                                    android:textColor="#fff"
+                                    android:textAllCaps="false"/>
+
+                            </RelativeLayout>
+
+                        </android.support.v7.widget.CardView>
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/card_view_home3"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp"
+                            android:elevation="3dp"
+                            card_view:cardCornerRadius="5dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/thumbnail_home3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="160dp"
+                                    android:background="?attr/selectableItemBackgroundBorderless"
+                                    android:clickable="true"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/jatimpark"/>
+
+                                <TextView
+                                    android:id="@+id/judul_produk3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/thumbnail_home3"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:paddingTop="10dp"
+                                    android:textColor="#000"
+                                    android:text="Batu Malang, Coban Rais."
+                                    android:textSize="12dp" />
+
+                                <ImageView
+                                    android:id="@+id/ic_locations3"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_below="@id/judul_produk3"
+                                    android:padding="5dp"
+                                    android:src="@drawable/ic_location" />
+
+                                <TextView
+                                    android:id="@+id/lokasi3"
+                                    android:layout_width="300dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/judul_produk3"
+                                    android:layout_toRightOf="@+id/ic_locations3"
+                                    android:paddingLeft="10dp"
+                                    android:padding="5dp"
+                                    android:text="Malang"
+                                    android:textColor="#454545"
+                                    android:textSize="12dp" />
+
+                                <TextView
+                                    android:id="@+id/harga3"
+                                    android:layout_width="95dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/lokasi3"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:paddingTop="5dp"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textStyle="bold"
+                                    android:text="Rp. 100.0000"
+                                    android:textSize="12dp"
+                                    android:layout_marginBottom="10dp"/>
+
+                                <Button
+                                    android:layout_width="75dp"
+                                    android:layout_height="25dp"
+                                    android:background="@color/colorPrimary"
+                                    android:layout_toRightOf="@id/harga3"
+                                    android:layout_below="@id/lokasi3"
+                                    android:text="Beli"
+                                    android:textColor="#fff"
+                                    android:textAllCaps="false"/>
+
+                            </RelativeLayout>
+
+                        </android.support.v7.widget.CardView>
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/card_view_home4"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp"
+                            android:elevation="3dp"
+                            card_view:cardCornerRadius="5dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/thumbnail_home4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="160dp"
+                                    android:background="?attr/selectableItemBackgroundBorderless"
+                                    android:clickable="true"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/jatimpark"/>
+
+                                <TextView
+                                    android:id="@+id/judul_produk4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/thumbnail_home4"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:paddingTop="10dp"
+                                    android:textColor="#000"
+                                    android:text="Batu Malang, Coban Rais."
+                                    android:textSize="12dp" />
+
+                                <ImageView
+                                    android:id="@+id/ic_locations4"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_below="@id/judul_produk4"
+                                    android:padding="5dp"
+                                    android:src="@drawable/ic_location" />
+
+                                <TextView
+                                    android:id="@+id/lokasi4"
+                                    android:layout_width="300dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/judul_produk4"
+                                    android:layout_toRightOf="@+id/ic_locations4"
+                                    android:paddingLeft="10dp"
+                                    android:padding="5dp"
+                                    android:text="Malang"
+                                    android:textColor="#454545"
+                                    android:textSize="12dp" />
+
+                                <TextView
+                                    android:id="@+id/harga4"
+                                    android:layout_width="95dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/lokasi4"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:paddingTop="5dp"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textStyle="bold"
+                                    android:text="Rp. 100.0000"
+                                    android:textSize="12dp"
+                                    android:layout_marginBottom="10dp"/>
+
+                                <Button
+                                    android:layout_width="75dp"
+                                    android:layout_height="25dp"
+                                    android:background="@color/colorPrimary"
+                                    android:layout_toRightOf="@id/harga4"
+                                    android:layout_below="@id/lokasi4"
+                                    android:text="Beli"
+                                    android:textColor="#fff"
+                                    android:textAllCaps="false"/>
+
+                            </RelativeLayout>
+
+                        </android.support.v7.widget.CardView>
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:textColor="#3e3e3e"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Paket Wisata"/>
+
+                <HorizontalScrollView
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:scrollbars="none"
+                    android:background="#fff">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/card_view_home5"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp"
+                            android:elevation="3dp"
+                            card_view:cardCornerRadius="5dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/thumbnail_home5"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="160dp"
+                                    android:background="?attr/selectableItemBackgroundBorderless"
+                                    android:clickable="true"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/jatimpark"/>
+
+                                <TextView
+                                    android:id="@+id/judul_produk5"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/thumbnail_home5"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:paddingTop="10dp"
+                                    android:textColor="#000"
+                                    android:text="Batu Malang, Coban Rais."
+                                    android:textSize="12dp" />
+
+                                <ImageView
+                                    android:id="@+id/ic_locations5"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_below="@id/judul_produk5"
+                                    android:padding="5dp"
+                                    android:src="@drawable/ic_location" />
+
+                                <TextView
+                                    android:id="@+id/lokasi5"
+                                    android:layout_width="300dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/judul_produk5"
+                                    android:layout_toRightOf="@+id/ic_locations5"
+                                    android:paddingLeft="10dp"
+                                    android:padding="5dp"
+                                    android:text="Malang"
+                                    android:textColor="#454545"
+                                    android:textSize="12dp" />
+
+                                <TextView
+                                    android:id="@+id/harga5"
+                                    android:layout_width="95dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/lokasi5"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:paddingTop="5dp"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textStyle="bold"
+                                    android:text="Rp. 100.0000"
+                                    android:textSize="12dp"
+                                    android:layout_marginBottom="10dp"/>
+
+                                <Button
+                                    android:layout_width="75dp"
+                                    android:layout_height="25dp"
+                                    android:background="@color/colorPrimary"
+                                    android:layout_toRightOf="@id/harga5"
+                                    android:layout_below="@id/lokasi5"
+                                    android:text="Beli"
+                                    android:textColor="#fff"
+                                    android:textAllCaps="false"/>
+
+                            </RelativeLayout>
+
+                        </android.support.v7.widget.CardView>
+                        <include layout="@layout/home_promo1" />
+                        <include layout="@layout/home_promo1" />
+                        <include layout="@layout/home_promo1" />
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:textColor="#3e3e3e"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Wisata"/>
+
+                <HorizontalScrollView
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:scrollbars="none"
+                    android:background="#fff">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/card_view_home6"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp"
+                            android:elevation="3dp"
+                            card_view:cardCornerRadius="5dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/thumbnail_home6"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="160dp"
+                                    android:background="?attr/selectableItemBackgroundBorderless"
+                                    android:clickable="true"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/jatimpark"/>
+
+                                <TextView
+                                    android:id="@+id/judul_produk6"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/thumbnail_home6"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:paddingTop="10dp"
+                                    android:textColor="#000"
+                                    android:text="Batu Malang, Coban Rais."
+                                    android:textSize="12dp" />
+
+                                <ImageView
+                                    android:id="@+id/ic_locations6"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_below="@id/judul_produk6"
+                                    android:padding="5dp"
+                                    android:src="@drawable/ic_location" />
+
+                                <TextView
+                                    android:id="@+id/lokasi6"
+                                    android:layout_width="300dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/judul_produk6"
+                                    android:layout_toRightOf="@+id/ic_locations6"
+                                    android:paddingLeft="10dp"
+                                    android:padding="5dp"
+                                    android:text="Malang"
+                                    android:textColor="#454545"
+                                    android:textSize="12dp" />
+
+                                <TextView
+                                    android:id="@+id/harga6"
+                                    android:layout_width="95dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/lokasi6"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:paddingTop="5dp"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textStyle="bold"
+                                    android:text="Rp. 100.0000"
+                                    android:textSize="12dp"
+                                    android:layout_marginBottom="10dp"/>
+
+                                <Button
+                                    android:layout_width="75dp"
+                                    android:layout_height="25dp"
+                                    android:background="@color/colorPrimary"
+                                    android:layout_toRightOf="@id/harga6"
+                                    android:layout_below="@id/lokasi6"
+                                    android:text="Beli"
+                                    android:textColor="#fff"
+                                    android:textAllCaps="false"/>
+
+                            </RelativeLayout>
+
+                        </android.support.v7.widget.CardView>
+                        <include layout="@layout/home_promo1" />
+                        <include layout="@layout/home_promo1" />
+                        <include layout="@layout/home_promo1" />
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:textColor="#3e3e3e"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Penginapan"/>
+
+                <HorizontalScrollView
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:scrollbars="none"
+                    android:background="#fff">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/card_view_home7"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp"
+                            android:elevation="3dp"
+                            card_view:cardCornerRadius="5dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/thumbnail_home7"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="160dp"
+                                    android:background="?attr/selectableItemBackgroundBorderless"
+                                    android:clickable="true"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/hotel"/>
+
+                                <TextView
+                                    android:id="@+id/judul_produk7"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/thumbnail_home7"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:paddingTop="10dp"
+                                    android:textColor="#000"
+                                    android:text="Hotel Kartika Graha."
+                                    android:textSize="12dp" />
+
+                                <ImageView
+                                    android:id="@+id/ic_locations7"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_below="@id/judul_produk7"
+                                    android:padding="5dp"
+                                    android:src="@drawable/ic_location" />
+
+                                <TextView
+                                    android:id="@+id/lokasi7"
+                                    android:layout_width="300dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/judul_produk7"
+                                    android:layout_toRightOf="@+id/ic_locations7"
+                                    android:paddingLeft="10dp"
+                                    android:padding="5dp"
+                                    android:text="Malang"
+                                    android:textColor="#454545"
+                                    android:textSize="12dp" />
+
+                                <TextView
+                                    android:id="@+id/harga7"
+                                    android:layout_width="95dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/lokasi7"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:paddingTop="5dp"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textStyle="bold"
+                                    android:text="Rp. 100.0000"
+                                    android:textSize="12dp"
+                                    android:layout_marginBottom="10dp"/>
+
+                                <Button
+                                    android:layout_width="75dp"
+                                    android:layout_height="25dp"
+                                    android:background="@color/colorPrimary"
+                                    android:layout_toRightOf="@id/harga7"
+                                    android:layout_below="@id/lokasi7"
+                                    android:text="Beli"
+                                    android:textColor="#fff"
+                                    android:textAllCaps="false"/>
+
+                            </RelativeLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                        <include layout="@layout/home_penginapan1" />
+                        <include layout="@layout/home_penginapan1" />
+                        <include layout="@layout/home_penginapan1" />
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:textColor="#3e3e3e"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Oleh-oleh"/>
+
+                <HorizontalScrollView
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:scrollbars="none"
+                    android:background="#fff">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/card_view_home8"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp"
+                            android:elevation="3dp"
+                            card_view:cardCornerRadius="5dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/thumbnail_home8"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="160dp"
+                                    android:background="?attr/selectableItemBackgroundBorderless"
+                                    android:clickable="true"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/strudel"/>
+
+                                <TextView
+                                    android:id="@+id/judul_produk8"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/thumbnail_home8"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:paddingTop="10dp"
+                                    android:textColor="#000"
+                                    android:text="Strudel Malang."
+                                    android:textSize="12dp" />
+
+                                <ImageView
+                                    android:id="@+id/ic_locations8"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_below="@id/judul_produk8"
+                                    android:padding="5dp"
+                                    android:src="@drawable/ic_location" />
+
+                                <TextView
+                                    android:id="@+id/lokasi8"
+                                    android:layout_width="300dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/judul_produk8"
+                                    android:layout_toRightOf="@+id/ic_locations8"
+                                    android:paddingLeft="10dp"
+                                    android:padding="5dp"
+                                    android:text="Malang"
+                                    android:textColor="#454545"
+                                    android:textSize="12dp" />
+
+                                <TextView
+                                    android:id="@+id/harga8"
+                                    android:layout_width="95dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/lokasi8"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:paddingTop="5dp"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textStyle="bold"
+                                    android:text="Rp. 100.0000"
+                                    android:textSize="12dp"
+                                    android:layout_marginBottom="10dp"/>
+
+                                <Button
+                                    android:layout_width="75dp"
+                                    android:layout_height="25dp"
+                                    android:background="@color/colorPrimary"
+                                    android:layout_toRightOf="@id/harga8"
+                                    android:layout_below="@id/lokasi8"
+                                    android:text="Beli"
+                                    android:textColor="#fff"
+                                    android:textAllCaps="false"/>
+
+                            </RelativeLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                        <include layout="@layout/home_oleh1" />
+                        <include layout="@layout/home_oleh1" />
+                        <include layout="@layout/home_oleh1" />
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigationViewBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#fff"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/navigation_bottom"/>
+
+</android.support.design.widget.CoordinatorLayout>

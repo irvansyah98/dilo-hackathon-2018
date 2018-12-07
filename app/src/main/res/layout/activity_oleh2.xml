@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailPaketActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbarOleh"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.design.widget.AppBarLayout
+                android:id="@+id/appbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+                <android.support.design.widget.CollapsingToolbarLayout
+                    android:id="@+id/collapsing_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fitsSystemWindows="true"
+                    android:background="#fff"
+                    app:contentScrim="?attr/colorPrimary"
+                    app:expandedTitleMarginEnd="64dp"
+                    app:expandedTitleMarginStart="48dp"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <com.synnapps.carouselview.CarouselView
+                            android:id="@+id/carouselView"
+                            android:layout_width="match_parent"
+                            android:layout_height="160dp"
+                            android:layout_marginBottom="10dp"
+                            app:fillColor="#FFFFFFFF"
+                            app:pageColor="#00000000"
+                            app:radius="6dp"
+                            app:slideInterval="3000"
+                            app:strokeColor="#FF777777"
+                            app:strokeWidth="1dp"/>
+
+                    </RelativeLayout>
+
+                </android.support.design.widget.CollapsingToolbarLayout>
+            </android.support.design.widget.AppBarLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:id="@+id/star"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_star"/>
+                <ImageView
+                    android:id="@+id/star2"
+                    android:layout_toRightOf="@+id/star"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_star"/>
+                <ImageView
+                    android:id="@+id/star3"
+                    android:layout_toRightOf="@+id/star2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_star"/>
+                <ImageView
+                    android:id="@+id/star4"
+                    android:layout_toRightOf="@+id/star3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_star"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/star4"
+                    android:text="dari 71 wisatawan"
+                    android:textStyle="italic"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/txt_judul_limbah"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Strudel Malang"
+                    android:textColor="#000"
+                    android:textSize="24dp"/>
+
+                <TextView
+                    android:id="@+id/txt_harga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp. 20.000"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="7dp"/>
+
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:text="Detail Destinasi Wisata"
+                    android:textAllCaps="false"
+                    android:layout_below="@+id/spin_kategori"
+                    android:layout_marginTop="25dp"
+                    android:background="#79B712"
+                    android:textColor="#fff"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_input2">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/ic_locations"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@id/judul_produk"
+                            android:padding="5dp"
+                            android:src="@drawable/ic_location" />
+
+                        <TextView
+                            android:id="@+id/lokasi"
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/judul_produk"
+                            android:layout_toRightOf="@+id/ic_locations"
+                            android:paddingLeft="10dp"
+                            android:padding="5dp"
+                            android:text="Alamat"
+                            android:textStyle="bold"
+                            android:textColor="#454545"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/alamat_detail"
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/lokasi"
+                            android:layout_toRightOf="@+id/ic_locations"
+                            android:paddingLeft="10dp"
+                            android:padding="5dp"
+                            android:text="Jl. Raya Songgoriti No.35, Songgokerto, Kec. Batu, Kota Batu, Jawa Timur 65312"
+                            android:textColor="#454545"
+                            android:textSize="14dp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/ic_deksripsi"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@id/judul_produk"
+                            android:padding="5dp"
+                            android:src="@drawable/ic_deskripsi" />
+
+                        <TextView
+                            android:id="@+id/deskripsi"
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/judul_produk"
+                            android:layout_toRightOf="@+id/ic_deksripsi"
+                            android:paddingLeft="10dp"
+                            android:padding="5dp"
+                            android:text="Deskripsi"
+                            android:textStyle="bold"
+                            android:textColor="#454545"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/deskripsi_detail"
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/deskripsi"
+                            android:layout_toRightOf="@+id/ic_deksripsi"
+                            android:paddingLeft="10dp"
+                            android:padding="5dp"
+                            android:text="Strudel adalah kue berlapis, yang terbuat dari pastry dan di isi berbagai buah-buahan. Kue ini adalah makanan populer di jaman Hasburg Empire (1278 – 1780) di Austria. Awal dari makanan ini diperkirakan ditemukan oleh bangsa Yunani dan Turki yang di kenal sebagai Backlava. Saking populernya, makanan ini menjadi makanan favorit rakyat Austria, Jerman dan negara Eropa lainnya. Di Eropa, Strudel yang terkenal dan favorit adalah yang berisi buah apel. Di Jerman sering disebut dengan apfel strudel. "
+                            android:textColor="#454545"
+                            android:textSize="14dp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+                <Button
+                    android:id="@+id/btn_logout"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_gravity="center"
+                    android:text="Pesan Sekarang"
+                    android:layout_below="@+id/spin_kategori"
+                    android:layout_marginTop="40dp"
+                    android:background="@color/colorPrimary"
+                    android:textColor="#fff"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

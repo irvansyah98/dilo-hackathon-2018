@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfilActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:layout_marginTop="-10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/jatimpark"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_profil"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="5dp"
+                android:src="@drawable/profil"
+                app:civ_border_color="#fff"
+                app:civ_border_width="5dp"
+                android:layout_marginTop="-60dp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="center"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:paddingBottom="10dp"
+                android:background="@drawable/underline">
+
+                <TextView
+                    android:id="@+id/lbl_nama"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Nama"
+                    android:textSize="12dp"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/txt_fullnameprofil"
+                    android:layout_width="200dp"
+                    android:layout_toRightOf="@+id/lbl_nama"
+                    android:layout_height="wrap_content"
+                    android:text="Iervan Firdiansyah"
+                    android:textSize="14dp"
+                    android:textColor="#767676"
+                    android:layout_marginTop="5dp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:paddingBottom="10dp"
+                android:background="@drawable/underline">
+                <TextView
+                    android:id="@+id/lbl_email"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Email"
+                    android:textSize="12dp"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/txt_emailprofil"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/lbl_email"
+                    android:text="iervanfirdiansyah@gmail.com"
+                    android:textSize="14dp"
+                    android:textColor="#767676"
+                    android:layout_marginTop="5dp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:paddingBottom="10dp"
+                android:background="@drawable/underline">
+                <TextView
+                    android:id="@+id/lbl_notelp"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="No Telepon"
+                    android:textSize="12dp"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/txt_phoneprofil"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/lbl_notelp"
+                    android:text="0895337348558"
+                    android:textSize="14dp"
+                    android:textColor="#767676"
+                    android:layout_marginTop="5dp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:paddingBottom="10dp"
+                android:background="@drawable/underline">
+                <TextView
+                    android:id="@+id/lbl_alamat"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Alamat"
+                    android:textSize="12dp"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/txt_addressprofil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/lbl_alamat"
+                    android:focusable="false"
+                    android:text="Surabaya"
+                    android:textSize="14dp"
+                    android:textColor="#767676"
+                    android:layout_marginTop="5dp"/>
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn_edit_profil"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_gravity="center"
+                android:text="Edit Profil"
+                android:background="@color/colorPrimary"
+                android:textColor="#fff"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"/>
+
+            <Button
+                android:id="@+id/btn_about"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="20dp"
+                android:layout_gravity="center"
+                android:text="Tentang Aplikasi"
+                android:background="@color/colorPrimary"
+                android:textColor="#fff"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"/>
+
+            <Button
+                android:id="@+id/btn_logout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="20dp"
+                android:layout_gravity="center"
+                android:text="Keluar Akun"
+                android:background="@color/colorPrimary"
+                android:textColor="#fff"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigationViewBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#fff"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/navigation_bottom"/>
+</android.support.design.widget.CoordinatorLayout>
